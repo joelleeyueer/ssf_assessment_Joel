@@ -18,7 +18,7 @@
 			<tr>
 				<td>Item:</td>
 				<td>
-					<select name="item" data-th-field="*{itemname}">
+					<select name="item" data-th-field="*{itemName}">
 						<option value="apple">Apple</option>
 						<option value="orange">Orange</option>
 						<option value="bread">Bread</option>
@@ -37,21 +37,9 @@
 			</tr>
 		</table>
 
+
+
 		<table border="1" style="margin-top: 2vh; margin-bottom: 2vh;">
-			<thead>
-				<tr>
-					<th>Item</th>
-					<th>Quantity</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-				</tr>
-			</tbody>
-		</table>
-
-
-		<table class="table table-striped">
 			<thead>
 			  <tr>
 				<th>Item</th>
@@ -60,14 +48,13 @@
 			</thead>
 			<tbody>
 			  <tr data-th-each="abc : ${cart}">
-				<td data-th-text="${abc}"></td>
-				<td data-th-text="${abc}"></td>
+				<td data-th-text="${abc.itemName}"></td>
+				<td data-th-text="${abc.qty}"></td>
 			  </tr>
 			</tbody>
 		<div>
-			<button type="button">Add</button>
-			<!-- <button class="button" formmethod="post" formaction="/add/checkout">Next</button> -->
-			<button class="button">Next</button>
+			<button formmethod="POST" formaction="/add" type="submit">Add</button>
+			<button formmethod="GET" formaction="/shipping" type="submit">Next</button>
 
 		</div>
 	</form>

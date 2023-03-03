@@ -22,7 +22,7 @@
     <div class="container">
     <h1 class="title">Shipping Address</h1>
     <br>
-    <form method="post" th:action="@{/add/shippingaddress/checkout}" th:object="${deliveryDetails}">
+    <form method="post" th:action="@{/shippingaddress/checkout}" th:object="${ShippingAddress}">
         <div class="row">
             <div class="col-2">
             <label for="name" >Name:</label>
@@ -45,8 +45,8 @@
 
             <br>
 
-        <button class="button" formmethod="get" formaction="/">Back</button>
-        <button type="submit">Checkout</button>
+        <button class="button" formmethod="GET" formaction="/">Back</button>
+        <button class="button" formmethod="POST" formaction="/checkout">Submit</button>
 
     </form>
     </div>
