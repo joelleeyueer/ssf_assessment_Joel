@@ -53,10 +53,7 @@ public class ShoppingCartController {
 		model.addAttribute("cartitems", new CartItems());
 		model.addAttribute("cart", cart);
 		
-
 		return "view1test";
-
-
 	}
 	
 	@PostMapping(path={"/add"})
